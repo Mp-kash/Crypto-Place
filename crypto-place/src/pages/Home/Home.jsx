@@ -3,7 +3,7 @@ import "./Home.css";
 import { CoinContext } from "../../context/CoinContext";
 import { Link } from "react-router-dom";
 
-const home = () => {
+const Home = () => {
   const { allCoin, currency } = useContext(CoinContext);
   const [displayCoin, setDisplayCoin] = useState([]);
   const [input, setInput] = useState("");
@@ -90,4 +90,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;
