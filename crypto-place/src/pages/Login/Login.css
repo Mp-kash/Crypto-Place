@@ -165,3 +165,68 @@ div img{
     transform: rotate(360deg);
   }
 }
+@media (max-width: 900px) {
+  div img{
+    margin: 16px 20px;
+    margin-bottom: 4px;
+    width: 120px;
+  }
+}
+@media (max-width: 720px) {
+  .login{
+    padding-bottom: 35px;
+  }
+  .submit{
+    padding: 14px 68px;
+  }
+}
+@media (max-width: 600px) {
+  .login{
+    max-width: 500px;
+    margin-top: 10px;
+  }
+  .input input{
+    width: 350px;
+  }
+  .submit{
+    padding: 14px 65px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 470px) {
+  .login{
+    max-width: 460px;
+  }
+  .input input{
+    width: 310px;
+  }
+  .text{
+    font-size: 36px;
+    font-weight: 600;
+  }
+  .submit{
+    padding: 12px 56px;
+  }
+}
+@media (max-width:400px) {
+  .login{
+    max-width: 400px;
+  }
+  .input input{
+    width: 280px;
+    font-size: 17px;
+  }
+  .text{
+    font-size: 32px;
+  }
+  .gray{
+    font-weight: 500;
+  }
+  .submit{
+    font-weight: 600;
+    padding: 13px 46px;
+  }
+  .submit-container{
+    gap: 20px;
+  }
+}

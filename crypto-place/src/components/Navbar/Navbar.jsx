@@ -4,9 +4,12 @@ import logo from "../../assets/logo.png";
 import arrow_icon from "../../assets/arrow_icon.png";
 import { CoinContext } from "../../context/CoinContext";
 import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth, logout } from "../../firebase";
 
 const Navbar = () => {
   const { setCurrency } = useContext(CoinContext);
+  const [user] = useAuthState(auth);
 
   const currencyHandler = (e) => {
     switch (e.target.value) {
@@ -49,9 +52,16 @@ const Navbar = () => {
           <option value="eur">EUR</option>
           <option value="inr">INR</option>
         </select>
-        <button>
-          Sign up <img src={arrow_icon} alt="" />
-        </button>
+
+        {user ? (
+          <button onClick={logout}>
+            Logout <img src={arrow_icon} alt="" />
+          </button>
+        ) : (
+          <Link to={"/login"}>
+            <button>Sign In</button>
+          </Link>
+        )}
       </div>
     </div>
   );

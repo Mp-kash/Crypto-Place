@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer.jsx";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase.js";
 import Login from "./pages/Login/Login.jsx";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   const location = useLocation();
@@ -26,6 +27,12 @@ const App = () => {
   return (
     <div className="app">
       {!hideLayout && <Navbar />}
+      <ToastContainer
+        toastClassName="custom-toast"
+        bodyClassName="custom-body"
+        progressClassName="custom-progress"
+        icon={false}
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

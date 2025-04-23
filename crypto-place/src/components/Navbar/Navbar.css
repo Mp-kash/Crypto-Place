@@ -50,6 +50,7 @@
 }
 .navbar button img{
   width: 13px;
+  margin: 0px;
 }
 @media (max-width: 900px){
   .navbar{
@@ -70,5 +71,6 @@
   }
   .navbar button img{
     width: 12px;
+    margin: 0px;
   }
 }

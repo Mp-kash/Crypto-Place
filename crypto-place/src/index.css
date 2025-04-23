@@ -13,3 +13,12 @@ a{
   color: #fff;
   background: linear-gradient(#0b004e, #1d152f, #002834);
 }
+
+.custom-toast{
+  background: linear-gradient(#23038e, #42006c, rgb(0, 119, 205));
+  color: #fff;
+  border-left: 5px solid #fff;
+}
+.custom-progress{
+  background: linear-gradient(#006aff, aqua, rgb(192, 255, 220))
+}
